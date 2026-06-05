@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #4a90e2;
+    --primary-hover: #357abd;
+    --bg-color: #f4f7f6;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Authentication Forms (Login/Register) */
+.auth-container {
+    background: var(--container-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.auth-links {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.auth-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Chatroom Layout */
+.chat-container {
+    background: var(--container-bg);
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h2 {
+    font-size: 1.2rem;
+}
+
+.chat-header button {
+    width: auto;
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.chat-header button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+.message {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    word-wrap: break-word;
+}
+
+.message .sender {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.system-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.chat-input-area {
+    padding: 1rem;
+    background: white;
+    border-top: 1px solid var(--border-color);
+}
+
+#chatForm {
+    display: flex;
+    gap: 10px;
+}
+
+#chatForm input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+#chatForm button {
+    width: auto;
+    padding: 10px 20px;
+}

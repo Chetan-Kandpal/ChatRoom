@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Live Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        <h2>Live Chatroom</h2>
+
+        <button id="logoutButton">
+            Logout
+        </button>
+    </div>
+
+    <div
+        id="chatBox"
+        class="chat-messages">
+    </div>
+
+    <div class="chat-input-area">
+
+        <form id="chatForm">
+
+            <input
+                id="messageInput"
+                type="text"
+                placeholder="Type a message..."
+                required>
+
+            <button type="submit">
+                Send
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
